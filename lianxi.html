@@ -1,13 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+	<title></title>
 </head>
 <body>
-	<script>/*JavaScript是可插入HTML页面的编程代码*/
-		document.write("<h1>This is a heading</h1>")
-		document.write("<p>This is a paragraph</p>")
+	<script type="text/javascript">
+	var name_01="marry",age=18,email="marry@sohu.com",address,settings=null;
+	console.log(name_01);
+	console.log(typeof name_01);/*检测变量类型写法1，结果是string*/
+	console.log(typeof(age));/*写法2，结果是number*/
+	console.log(typeof(address));/*结果是undefined*/
+	console.log(typeof(settings));/*结果是unll*/
+	// 说明：undefined值是派生自null值的，所以undefined==unll的返回结果是true
+	console.log(typeof(age-"abc"));/*结果是NaN*/
+	// number:表示整数和浮点数 NaN:即非数值(Not a Number)是一个特殊的数值
+	//任何涉及NaN的操作(例如NaN/10)都会返回NaN.
+	//NaN与任何值都不相等，包括NaN本身.
+	//方法 isNaN(n) 检测n是否是"非数值" 返回值：boolean类型
+	console.log(isNaN(age));/*结果是false*/
+	console.log(isNaN(email));/*结果是true*/
+	// isNaN()对接收的数值，先尝试转换为数值，再检测是否为非数值
+	var id="16";/*所有引号内的变量都是字符串类型*/
+	console.log(isNaN(id));/*结果是false*/
+
 	</script>
 </body>
 </html>
