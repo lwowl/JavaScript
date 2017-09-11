@@ -56,8 +56,59 @@
 	var x=13424;
 	console.log(Boolean(x));/*结果是true*/
 	//除0以外的所有数字，转换为布尔型都为true
-	//除""之外的所有字符，转换为布尔型都为true
+	//除""之外的所有字符串，转换为布尔型都为true
 	//null和undefined转换为布尔型为false
+	</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>操作符</title>
+</head>
+<body>
+	<script type="text/javascript">
+	var num1=10,
+		num2="abc",
+		num3="5"; 
+		console.log(num1-num2);/*结果是NaN*/
+		console.log(num1-num3);/*结果是5，num3进行了隐式类型转换*/
+		i++;/*先返回原值，再进行自增 */
+		++i;/*先自增，再返回值*/
+		a+=5; /*a=a+5*/
+		b%=4; /*b=b%4*/
+	var x=10,
+		y="10",
+		m=15;
+		o=x==y;/*值是否相等*/
+		p=x===y;/*全等*/
+		n=y!=m;/*结果是true*/
+		n=x!=y;/*结果是false*/
+		n=x!==y; /*结果是true*/
+		console.log(o); /*结果是true*/
+		console.log(p); /*结果是false*/
+		console.log(null==undefined);/*结果是true*/
+		console.log(null===undefined); /*结果是false*/
+		// 三元操作符
+		// 语法：条件？执行代码1:执行代码2
+		var soce=85;
+		var result=(soce>=60)?"及格":"不及格";
+		console.log(result); /*结果是及格*/
+	</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>分支语句</title>
+</head>
+<body>
+	<script type="text/javascript">
+	if (condition) {	/*会强制转换condition为boolean*/
+		statement1;
+	}
 	</script>
 </body>
 </html>
