@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>数据类型</title>
 </head>
 <body>
 	<script type="text/javascript">
 	var name_01="marry",age=18,email="marry@sohu.com",address,settings=null;
-	console.log(name_01);
+	console.log(name_01);/*浏览器控制台输出marry*/
 	console.log(typeof name_01);/*检测变量类型写法1，结果是string*/
 	console.log(typeof(age));/*写法2，结果是number*/
 	console.log(typeof(address));/*结果是undefined*/
@@ -22,7 +22,42 @@
 	// isNaN()对接收的数值，先尝试转换为数值，再检测是否为非数值
 	var id="16";/*所有引号内的变量都是字符串类型*/
 	console.log(isNaN(id));/*结果是false*/
-
+	id=Number(id);/*将id强制转换为数值类型*/
+	name_01=Number(name_01);/*将id强制转换为数值类型*/
+	console.log(typeof id);/*结果是number*/
+	console.log(name_01);/*结果是NaN*/
+	//不建议使用number()对数据进行强制转换
+	//建议使用parseInt()和parseFloat()专门用于把字符串转换成数值
+	var topval=parseInt("28px");
+	console.log(topval);/*结果是28*/
+	var c="abc58";
+	console.log(parseInt(c));/*结果是NaN*/
+	// parseInt必须以数字开头的才会提取，否则返回的都是NaN
+	console.log(parseInt("0xf"));/*结果是15，把0xf转换为16进制*/
+	console.log(parseInt("0xf",16));/*把0xf转换为16进制*/
+	//parseFloat第一个小数点有效，其他不提取
+	var d="12.34.12px";
+	var e="0123";
+	console.log(parseInt(d));/*结果是12*/
+	console.log(parseInt(e));/*结果是123*/
+	console.log(parseFloat(d));/*结果是12.34*/
+	console.log(parseFloat(e));/*结果是123*/
+	//String类型用于表示由零或多个16位Unicode字符组成的字符序列，即字符串。
+	//String()函数   toString()方法
+	var ids=78965;
+	var idstr=ids.toString();
+	console.log(typeof idstr);/*结果是string*/
+	var m;
+	console.log(String(m));/*结果是undefined*/
+	var isStudent=true;
+	var isChild=false;
+	console.log(typeof isStudent);/*结果是boolean*/
+	console.log(isStudent.toString())/*结果是false*/
+	var x=13424;
+	console.log(Boolean(x));/*结果是true*/
+	//除0以外的所有数字，转换为布尔型都为true
+	//除""之外的所有字符，转换为布尔型都为true
+	//null和undefined转换为布尔型为false
 	</script>
 </body>
 </html>
